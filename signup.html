@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginSignUp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="dashboard.html"><button style="display: none;" class="dashboard">Dashboard</button></a> 
+                <a href="index.html"> <img src="images/logo.png" alt="logo" style="height: 70px; width: 70px;" ></a>
+            </div>
+            <div class="components"> 
+                <button onclick="openDashboard()" class="dashboard">Dashboard</button>
+                <a href="login.html"><button class="logIn">Log In</button></a>
+                <a href="signup.html"><button class="signIn"> Sign Up</button></a>
+                <button class="logOut"> Log Out</button>
+            </div>
+        </nav>
+        <main>
+            <div class="signupForm">
+                <h2>Sign Up</h2>
+                <div class="enterName">
+                    <input type="text" placeholder="Enter Your Name" id="signUpname" class="name">
+                </div>
+                <div class="enterEmail">
+                    <input type="text" placeholder="Enter Your Email" id="signUpemail" class="email">
+                </div>
+                <div class="enterPass" >
+                    <input type="password" name="" id="signUppassword" class="password" placeholder="Password" >
+                </div>
+                <button class="submit" id="submitsignUpinfo" type="submit">Submit</button>
+                <p id="Already">Already have an account <a href="login.html">Log In</a></p>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth/signUp.js"></script>
+</body>
+</html>
