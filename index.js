@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.reload();
         });
     } else {
-        
+        dashboardBtn.addEventListener("click", function() {
+            alert("You have to log in first")
+        });
     }
 });
 
