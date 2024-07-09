@@ -22,3 +22,37 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+let submitlibraryBtn = document.querySelector(".submitLib")
+submitlibraryBtn.addEventListener("click", submitBooks);
+
+let bookSelect = document.querySelector("#bookName");
+let bookCategory = document.querySelector("#bookCategory");
+let fromDate = document.querySelector("#fromDate");
+let toDate = document.querySelector("#toDate");
+let currentUser = localStorage.getItem('currentUser');
+function addBook() {
+    let books = JSON.parse(localStorage.getItem('books')) || []
+    let newBook = {
+        Receiver : currentUser,
+        bookName : bookSelect.value,
+        bookCategory : bookCategory.value,
+        fromDate : fromDate.value,
+        toDate : toDate.value
+    };
+    books.push(newBook);
+    localStorage.setItem('books', JSON.stringify(books));
+    redirectToDashboard()
+}
+function submitBooks() {
+  if(bookSelect.value =="" || bookCategory.value == "" || fromDate.value == "" || toDate.value == ""){
+     alert("Please fill the details");
+  }else{
+    addBook();
+    
+  }
+}
+function redirectToDashboard() {
+    setTimeout(function() {
+        window.location.href = 'dashboard.html';
+    }, 2000);
+}

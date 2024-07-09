@@ -19,37 +19,37 @@
                 <button class="logOut"> Log Out</button>
             </div>
         </nav>
-        <main>
-           <h1>Welcome to the Dashboard</h1>
-           <p id="welcomeMessage"></p>
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/KkCXLABwHP0?si=zlVH-rR8ab6MPzcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         <audio src="https://assets.codepen.io/6093409/drums.mp3" controls></audio>
-            <table border="1px" cellspacing = "0px">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Employ ID</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>Satya</td>
-                    <td>1234</td>
-                </tr>
-                <tr>
-                    <td>Rahul</td>
-                    <td>1234</td>
-                </tr>
-                <tr>
-                    <td>umesh</td>
-                    <td>1234</td>
-                </tr>
-            </table>
-           
-
-
-           <audio src=""></audio>
-        </main>
-        </main>
+       </div>
+     <div>
+        <h3 id="welcomeMessage"></h3>
+     </div>
+     <table id="libraryTable">
+        <caption>Library Books info</caption>
+        <thead>
+            <tr>
+                <th>Sl.no</th>
+                <th>Name</th>
+                <th>Book Name</th>
+                <th>Category</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+    
+  <div class="filter">
+       <select name="filter" id="filterCategory">
+        <option value="">Filter Category</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Computer">Computer</option>
+        <option value="Mathmatics">Mathmatics</option>
+        <option value="History">History</option>
+       </select>
     </div>
     <script src="js/dashboard.js"></script>
 </body>

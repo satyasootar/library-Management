@@ -23,10 +23,48 @@
                 <button class="logOut"> Log Out</button>
             </div>
         </nav>
-        <main>
-           <h1>This is home page</h1>
-
     </div>
+        <main>
+         <form name="library" method="post">
+            <fieldset>
+                <legend>Library Management</legend>
+         <div class="bookinfo">
+            <div class="bookinfoselect">
+
+            <select name="Books" id="bookName">
+                <option value="">Book Name</option>
+                <option value="Looking for alaska">Looking for alaska</option>
+                <option value="Let it snow">Let it snow</option>
+                <option value="Lord Of Rings">Lord Of Rings</option>
+                <option value="Python course">Python course</option>
+                <option value="Basic Math">Basic Math</option>
+            </select>
+        </div>
+
+            <select name="Category" id="bookCategory">
+                <option value="">Book Category</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Computer">Computer</option>
+                <option value="Mathmatics">Mathmatics</option>
+                <option value="History">History</option>
+            </select>
+        </div>
+         <div class="dateInput">
+            <label for="from">From:</label>
+            <input type="date" id="fromDate" name="from">
+
+            <label for="to">To:</label>
+            <input type="date" id="toDate" name="to">
+        </div>
+        <div class="libButton">
+            <button class="submitLib" type="button">Submit</button>
+        </div>
+        </fieldset>
+         </form>
+
+        </main>
+    
     <script src="index.js"></script>
+    <!-- <script src="js/dashboard.js"></script> -->
 </body>
 </html>

@@ -137,11 +137,106 @@ a{
     border-radius: 12px;
     cursor: pointer;
 }
-table{
-    border: 3px solid rgb(77, 28, 202);
-    background-color: aqua;   
+
+fieldset{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background-color: rgb(241, 198, 235);
+    border-radius: 20px;
 }
-tr{
-    border: dotted rgb(27, 207, 150);
+legend{
     text-align: center;
+}
+#bookName{
+   padding: 3px;
+   width: 300px;
+   text-align: center;
+   border-radius: 5px;
+   background-color: rgb(179, 249, 255);
+   border: none;
+   outline: none;
+}
+.bookinfoselect{
+   padding-bottom: 10px;
+}
+#bookCategory{
+   padding: 3px;
+   width: 300px;
+   text-align: center;
+   border-radius: 5px;
+   background-color: rgb(179, 249, 255);
+   border: none;
+   outline: none;
+}
+.dateInput{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    outline: none;
+    
+}
+#fromDate{
+   padding: 1px;
+   width: 150px;
+   text-align: center;
+   background-color: rgb(179, 249, 255);
+   border: none;
+   border-radius: 13px;
+   outline: none;
+}
+#toDate{
+   padding: 1px;
+   width: 150px;
+   text-align: center;
+   background-color: rgb(179, 249, 255);
+   border: none;
+   border-radius: 13px;
+   outline: none;
+}
+.bookinfo{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-left: 12%;
+}
+.submitLib{
+    background-color: violet;
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px; 
+}
+.libButton{
+    padding-left: 36%;
+}
+table , thead , td ,tr , th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+.filter{
+    text-align: center;
+    padding-top: 20px;
+    height: 40px;
+}
+#filterCategory{
+    height: 30px;
+    width:150px ;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(174, 245, 245);
+    padding-left: 1.25%;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+#filterCategory:hover{
+    background-color: rgb(51, 247, 244);
+    font-size: 15px;
 }
