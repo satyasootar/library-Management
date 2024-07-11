@@ -5,8 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = 'login.html';
     }
 
-    let filterBtn = document.querySelector("#filterCategory");
-    filterBtn.addEventListener("change", filter);
+    let filterCategoryBtn = document.querySelector("#filterCategory");
+    filterCategoryBtn.addEventListener("change", filter);
+     
+    let filterStatusBtn = document.querySelector("#filterStatus");
+    filterStatusBtn.addEventListener('change', filter);
 
     let currentUser = localStorage.getItem('currentUser');
     let welcomeMessage = document.querySelector("#welcomeMessage");
@@ -22,13 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
     populateTable();
 });
 
-function populateTable(filterCategory = "") {
+function populateTable(filterCategory = "", filterStatus = "") {
     let books = JSON.parse(localStorage.getItem('books')) || [];
     let tableBody = document.querySelector("#libraryTable tbody");
     tableBody.innerHTML = "";
 
     books.forEach((book, index) => {
-        if (filterCategory && book.bookCategory !== filterCategory) {
+        if ((filterCategory && book.bookCategory !== filterCategory) ||
+            (filterStatus && getStatus(book) !== filterStatus)) {
             return; 
         }
 
@@ -86,7 +90,7 @@ function getStatus(book) {
         return "Time to return";
     }
 
-    return "Burrowed";
+    return "Borrowed"; 
 }
 
 function markAsReturned(index) {
@@ -98,5 +102,6 @@ function markAsReturned(index) {
 
 function filter() {
     let filterCategory = document.querySelector("#filterCategory").value;
-    populateTable(filterCategory);
+    let filterStatus = document.querySelector("#filterStatus").value;
+    populateTable(filterCategory, filterStatus);
 }
